@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To my bf, Alen </title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #F8C8DC;
+            margin: 0;
+            overflow: hidden; /* Prevents scrollbars */
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .header_text {
+            font-family: 'Nunito', sans-serif;
+            font-size: 35px;
+            font-weight: bold;
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .gif_container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Space between buttons */
+            padding: 20px;
+        }
+
+        .btn {
+            background-color: #FFB6C1;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            font-size: 16px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Other styles... */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1 class="header_text">❀ ALEN BABES ❀ <br>I ♥️  you to the moon and back, to ♾️ and beyond...<br>Will you be my Valentine? (~ ˘ ³˘)~
+        </div>
+        <div class="gif_container">
+            <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDdtZ2JiZDR0a3lvMWF4OG8yc3p6Ymdvd3g2d245amdveDhyYmx6eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/cLS1cfxvGOPVpf9g3y/giphy.gif" alt="Cute animated illustration" style="max-width: 100%; height: auto;">
+        </div>
+        <div class="buttons">
+            <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
+            <button class="btn" id="noButton" onmouseover="moveButton(this)">No</button>
+        </div>
+    </div>
+    <script>
+        function nextPage() {
+            window.location.href = "2_yes.html";
+        }
+
+        function moveButton(btn) {
+            const offset = 100; // Offset to prevent button from disappearing off the edge
+            let x = Math.random() * (window.innerWidth - offset);
+            let y = Math.random() * (window.innerHeight - offset);
+
+            // Keep the button on the screen
+            x = Math.max(offset, Math.min(x, window.innerWidth - btn.offsetWidth - offset));
+            y = Math.max(offset, Math.min(y, window.innerHeight - btn.offsetHeight - offset));
+
+            btn.style.position = 'fixed';
+            btn.style.left = `${x}px`;
+            btn.style.top = `${y}px`;
+        }
+    </script>
+</body>
+</html>
